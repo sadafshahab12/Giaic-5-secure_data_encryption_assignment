@@ -4,17 +4,13 @@
 # The system operates entirely in memory without external databases.
 import streamlit as st
 import hashlib
-
+import json
+import time
+import base64
 from cryptography.fernet import Fernet
 
-# generate a key 
-KEY = Fernet.generate_key()
-cipher = Fernet(KEY)
-
-# in memory data store 
-stored_data = {}
-failed_attempts = 0
-
-# function to hash pass key 
-def hash_passkey(passkey):
-    return hashlib.sha256(passkey.encode()).hexdigest()
+if "failed_attempts" not in st.session_state:
+    st.session_state.failed_attempts = 0  # it track how may times password enter
+if "stored_data" not in st.session_state:
+    
+# generate a key
