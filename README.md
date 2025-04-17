@@ -106,4 +106,4 @@ a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b...
 
 - Fernet is a tool that lets you **securely lock data** with **one key (symmetric)** using AES, and it even tags it with a **timestamp** so you know how fresh the data is.
 
-st.session_state is a special dictionary that lets you store data across user interactions — like remembering values between button clicks or page refreshes.
+**st.session_state** is a **special dictionary** that lets you store data across user interactions — like **remembering values between button clicks or page refreshes**.
